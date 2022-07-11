@@ -6,4 +6,6 @@ HTML
 CSS
 React
 NodeJS
-Soft Skills
+Git
+GitHub
+
