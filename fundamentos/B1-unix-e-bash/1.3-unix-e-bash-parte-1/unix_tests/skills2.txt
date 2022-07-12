@@ -6,3 +6,6 @@ HTML
 CSS
 React
 NodeJS
+Git
+GitHub
+
