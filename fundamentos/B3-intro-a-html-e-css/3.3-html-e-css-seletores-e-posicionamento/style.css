@@ -1,16 +1,3 @@
-h1, p {
-    text-align: center;
-}
-
-ol:hover {
-    background-color: blue;
-    color: white;
-}
-
-li:active {
-    color: red;
-}
-
-li {
-    list-style: none;
+div:hover {
+    border: 3px solid black;
 }
