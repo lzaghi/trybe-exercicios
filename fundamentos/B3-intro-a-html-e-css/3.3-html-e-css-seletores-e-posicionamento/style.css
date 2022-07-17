@@ -1,0 +1,66 @@
+/* requisito 1 */
+ol li {
+    background-color: yellow;
+}
+
+ol li:nth-child(even) {
+    color: green;
+}
+
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+/* requisito 2 */
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+/* requisito 3 */
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+/* requisito 4 */
+#prog li:nth-child(-n+3) { /* li:not(:nth-child(n + 4)) */
+    color: blue;
+}
+
+#prog .java {
+    background-color: pink;
+}
+
+/* requisito 5 */
+#sites li:nth-child(n):hover{
+    font-weight: bold;
+}
+
+#sites li:nth-child(1):hover,
+#sites li:nth-child(1) a:hover  {    /* gabarito: #aliados li a[href*="stackoverflow"] */
+    color: orange;
+}
+
+#sites li:nth-child(2) a:hover {
+    color: green;
+}
+
+#sites li:nth-child(3) a:hover {
+    color: black;
+}
+
+#sites li:nth-child(4) a:hover {
+    color: yellow;
+}
+
+#sites li:nth-child(5) a:hover {
+    color: lightgreen;
+}
