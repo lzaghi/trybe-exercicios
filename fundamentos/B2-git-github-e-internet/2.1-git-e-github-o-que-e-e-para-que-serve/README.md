@@ -1,4 +1,4 @@
-# Dia 3
+# Dia 1
 
 O objetivo dos exercícios desse dia foi configurar o Git na minha máquina, iniciar um repositório local e subir para o GitHub, consolidando assim os conceitos de commits, merge e branchs
 
