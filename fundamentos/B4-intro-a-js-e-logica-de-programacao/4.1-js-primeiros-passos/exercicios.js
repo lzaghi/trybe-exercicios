@@ -130,6 +130,18 @@
 //   console.log("false");
 // }
 
+                                                      //                            RESOLUÇÃO 8
+                                                      // const a = 1;
+                                                      // const b = 3;
+                                                      // const c = 5;
+
+                                                      // let isEven = false;
+
+                                                      // if ((a % 2 === 0 || b % 2 === 0 || c % 2 === 0)) {
+                                                      //   isEven = true;
+                                                      // };
+                                                      // console.log(isEven);
+
 //                          EXERCICIO 9
 // const a = 2;
 // const b = 3;
@@ -141,6 +153,18 @@
 // else {
 //   console.log("false");
 // }
+
+                                                      //                            RESOLUÇÃO 9
+                                                      // const a = 1;
+                                                      // const b = 3;
+                                                      // const c = 5;
+
+                                                      // let isOdd = false;
+
+                                                      // if ((a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0)) {
+                                                      //   isOdd = true;
+                                                      // };
+                                                      // console.log(isOdd);
 
 //                        EXERCICIO 10
 // const custo = 50;
@@ -195,3 +219,35 @@ else if (salarioDescontadoDeINSS > 4664.68) {
 }
 
 console.log(salarioDescontadoDeIR);
+
+                                                                // RESOLUÇÃO 11
+                                                                // let aliquotINSS;
+                                                                // let aliquotIR;
+
+                                                                // const grossSalary = 2000.00;
+
+                                                                // if (grossSalary <= 1556.94) {
+                                                                //   aliquotINSS = grossSalary * 0.08;
+                                                                // } else if (grossSalary <= 2594.92) {
+                                                                //   aliquotINSS = grossSalary * 0.09;
+                                                                // } else if (grossSalary <= 5189.82) {
+                                                                //   aliquotINSS = grossSalary * 0.11;
+                                                                // } else {
+                                                                //   aliquotINSS = 570.88;
+                                                                // }
+
+                                                                // const baseSalary = grossSalary - aliquotINSS;
+
+                                                                // if (baseSalary <= 1903.98) {
+                                                                //   aliquotIR = 0;
+                                                                // } else if (baseSalary <= 2826.65) {
+                                                                //   aliquotIR = (baseSalary * 0.075) - 142.80;
+                                                                // } else if (baseSalary <= 3751.05) {
+                                                                //   aliquotIR = (baseSalary * 0.15) - 354.80;
+                                                                // } else if (baseSalary <= 4664.68) {
+                                                                //   aliquotIR = (baseSalary * 0.225) - 636.13;
+                                                                // } else {
+                                                                //   aliquotIR = (baseSalary * 0.275) - 869.36;
+                                                                // };
+
+                                                                // console.log("Salário: " + (baseSalary - aliquotIR));
