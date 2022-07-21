@@ -143,3 +143,55 @@
 // }
 
 //                        EXERCICIO 10
+// const custo = 50;
+// const venda = 220;
+
+// let custoTotal = custo + (0.2 * custo);
+// let lucro = venda - custoTotal;
+
+// let lucroFinal = lucro * 1000;
+
+// if (custo < 0 || venda < 0) {
+//   console.log("Erro: valor inválido");
+// }
+// else {
+//   console.log("O lucro é de: " + lucroFinal);
+// }
+
+//                       EXERCICIO 11
+const salarioInicial = 3000;
+
+let salarioDescontadoDeINSS = 0;
+
+if (salarioInicial <= 1556.94) {
+  salarioDescontadoDeINSS = salarioInicial - (salarioInicial*.08)
+}
+else if (salarioInicial > 1556.94 && salarioInicial <=2594.92) {
+  salarioDescontadoDeINSS = salarioInicial - (salarioInicial*.09)
+}
+else if (salarioInicial > 2594.92 && salarioInicial <=5189.82) {
+  salarioDescontadoDeINSS = salarioInicial - (salarioInicial*.11)
+}
+else if (salarioInicial > 5189.82) {
+  salarioDescontadoDeINSS = salarioInicial - 570.88
+}
+
+let salarioDescontadoDeIR =0;
+
+if (salarioDescontadoDeINSS <= 1903.98) {
+  salarioDescontadoDeIR = salarioDescontadoDeINSS
+}
+else if (salarioDescontadoDeINSS > 1903.98 && salarioDescontadoDeINSS <=2826.65) {
+  salarioDescontadoDeIR = salarioDescontadoDeINSS - (salarioDescontadoDeINSS*.075 - 142.80)
+}
+else if (salarioDescontadoDeINSS > 2826.65 && salarioDescontadoDeINSS <=3751.05) {
+  salarioDescontadoDeIR = salarioDescontadoDeINSS - (salarioDescontadoDeINSS*.15 - 354.80)
+}
+else if (salarioDescontadoDeINSS > 3751.05 && salarioDescontadoDeINSS <=4664.68) {
+  salarioDescontadoDeIR = salarioDescontadoDeINSS - (salarioDescontadoDeINSS*.225 - 636.13)
+}
+else if (salarioDescontadoDeINSS > 4664.68) {
+  salarioDescontadoDeIR = salarioDescontadoDeINSS - (salarioDescontadoDeINSS*.275 - 869.36)
+}
+
+console.log(salarioDescontadoDeIR);
