@@ -115,13 +115,30 @@
 
 
 //             EXERCICIO BONUS 1
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// for (let i = 1; i < numbers.length; i += 1) {
+
+//   for (let j = 0; j < i; j += 1) {
+
+//     if (numbers[i] < numbers[j]) {
+//       let position = numbers[i];
+//       numbers[i] = numbers[j];
+//       numbers[j] = position;
+//     }
+//   }
+// }
+// console.log(numbers);
+
+
+//              EXERCICIO BONUS 2
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 for (let i = 1; i < numbers.length; i += 1) {
 
   for (let j = 0; j < i; j += 1) {
 
-    if (numbers[i] < numbers[j]) {
+    if (numbers[i] > numbers[j]) {
       let position = numbers[i];
       numbers[i] = numbers[j];
       numbers[j] = position;
@@ -129,6 +146,3 @@ for (let i = 1; i < numbers.length; i += 1) {
   }
 }
 console.log(numbers);
-
-
-//              EXERCICIO BONUS 2
