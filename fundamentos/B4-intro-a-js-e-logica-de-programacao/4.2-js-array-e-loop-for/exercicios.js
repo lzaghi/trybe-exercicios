@@ -100,15 +100,35 @@
 
 
 //            EXERCICIO 9
-let myArray = [];
+// let myArray = [];
 
-for (let i = 1; i < 26; i++) {
-  myArray.push(i);
+// for (let i = 1; i < 26; i++) {
+//   myArray.push(i);
+// }
+
+// let myArrayDiv = [];
+// for (let j = 0; j < myArray.length; j++) {
+//   myArrayDiv.push((myArray[j]/2))
+// }
+
+// console.log(myArrayDiv)
+
+
+//             EXERCICIO BONUS 1
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+for (let i = 1; i < numbers.length; i += 1) {
+
+  for (let j = 0; j < i; j += 1) {
+
+    if (numbers[i] < numbers[j]) {
+      let position = numbers[i];
+      numbers[i] = numbers[j];
+      numbers[j] = position;
+    }
+  }
 }
+console.log(numbers);
 
-let myArrayDiv = [];
-for (let j = 0; j < myArray.length; j++) {
-  myArrayDiv.push((myArray[j]/2))
-}
 
-console.log(myArrayDiv)
+//              EXERCICIO BONUS 2
