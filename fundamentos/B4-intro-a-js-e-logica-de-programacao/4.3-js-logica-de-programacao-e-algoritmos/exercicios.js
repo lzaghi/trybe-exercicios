@@ -54,3 +54,6 @@ for (let k = 1; k < arrayTamanhos.length; k += 1) {
   }
 }
 console.log("a menor palavra é:", array[index2], "com", menor, "caracteres");
+
+
+//                                 EXERCICIO 4
