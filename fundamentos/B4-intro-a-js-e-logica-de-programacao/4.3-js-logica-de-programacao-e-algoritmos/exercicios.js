@@ -29,31 +29,49 @@
 
 
 //                                 EXERCICIO 3
-let array = ['java', 'javascript', 'python', 'html', 'css'];
-let arrayTamanhos =[];
-for (let i = 0; i < array.length; i += 1) {
-  arrayTamanhos.push(array[i].length)
-}
+// let array = ['java', 'javascript', 'python', 'html', 'css'];
+// let arrayTamanhos =[];
+// for (let i = 0; i < array.length; i += 1) {
+//   arrayTamanhos.push(array[i].length)
+// }
 
-let maior = arrayTamanhos[0]
-let index;
-for (let j = 1; j < arrayTamanhos.length; j += 1) {
-  if (arrayTamanhos[j] > maior) {
-    maior = arrayTamanhos[j];
-    index = j;
-  }
-}
-console.log("a maior palavra é:", array[index], "com", maior, "caracteres");
+// let maior = arrayTamanhos[0]
+// let index;
+// for (let j = 1; j < arrayTamanhos.length; j += 1) {
+//   if (arrayTamanhos[j] > maior) {
+//     maior = arrayTamanhos[j];
+//     index = j;
+//   }
+// }
+// console.log("a maior palavra é:", array[index], "com", maior, "caracteres");
 
-let menor = arrayTamanhos[0]
-let index2;
-for (let k = 1; k < arrayTamanhos.length; k += 1) {
-  if (arrayTamanhos[k] < menor) {
-    menor = arrayTamanhos[k];
-    index2 = k;
-  }
-}
-console.log("a menor palavra é:", array[index2], "com", menor, "caracteres");
+// let menor = arrayTamanhos[0]
+// let index2;
+// for (let k = 1; k < arrayTamanhos.length; k += 1) {
+//   if (arrayTamanhos[k] < menor) {
+//     menor = arrayTamanhos[k];
+//     index2 = k;
+//   }
+// }
+// console.log("a menor palavra é:", array[index2], "com", menor, "caracteres");
 
 
 //                                 EXERCICIO 4
+let primos = [];
+
+for (let i = 2; i <= 50; i += 1) {
+  let counter = 0;
+
+  for (let j = 2 ; j <= i; j+= 1) {
+    
+    if (i % j === 0) {
+      counter += 1
+    }
+  }
+
+  if (counter === 1) {
+    primos.push(i)
+  }
+}
+console.log(primos);
+console.log(primos[primos.length - 1])
