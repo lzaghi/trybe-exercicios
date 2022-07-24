@@ -57,21 +57,34 @@
 
 
 //                                 EXERCICIO 4
-let primos = [];
+// let primos = [];
 
-for (let i = 2; i <= 50; i += 1) {
-  let counter = 0;
+// for (let i = 2; i <= 50; i += 1) {
+//   let counter = 0;
 
-  for (let j = 2 ; j <= i; j+= 1) {
+//   for (let j = 2 ; j <= i; j+= 1) {
     
-    if (i % j === 0) {
-      counter += 1
-    }
-  }
+//     if (i % j === 0) {
+//       counter += 1
+//     }
+//   }
 
-  if (counter === 1) {
-    primos.push(i)
-  }
+//   if (counter === 1) {
+//     primos.push(i)
+//   }
+// }
+// console.log(primos);
+// console.log(primos[primos.length - 1])
+
+
+//                            EXERCICIO BONUS 1
+let n = 5;
+let string = "";
+
+for (let i = 1; i <= n; i += 1) {
+  string += "*"
 }
-console.log(primos);
-console.log(primos[primos.length - 1])
+
+for (j = 0; j < n; j+= 1){
+  console.log(string);
+}
