@@ -91,10 +91,48 @@
 
 
 //                          EXERCICIO BONUS 2
-let n = 5;
-let string = "";
+// let n = 5;
+// let string = "";
 
-for (let i = 0; i < n; i += 1){
-  string += "*";
+// for (let i = 0; i < n; i += 1){
+//   string += "*";
+//   console.log(string);
+// }
+
+
+//                      EXERCICIO BONUS 3
+// let n = 5;
+// let string = "";
+
+// for (let i = 0; i < n; i += 1) {
+
+//   for (let j = n - 1; j >= 0; j -= 1) {
+//     string += " ";
+//   }
+
+//   string += "*";
+
+//   console.log(string);
+// }
+
+
+let espacos = 4
+for (let j = 0; j < espacos; j += 1) {
+  let string = "";
+  let repeticoes = espacos - j;
+  
+  for (let i = 0; i < repeticoes; i += 1) {
+    string += "*";
+  }
+  
+  let n = 5;
+  // for (let l = 4; l >= 0; l -= 1) {
+  //   let reps = n - l;
+
+  for (let k = 0; k < n; k += 1) {
+    string += "a";
+  }
+  // }
+
   console.log(string);
 }
