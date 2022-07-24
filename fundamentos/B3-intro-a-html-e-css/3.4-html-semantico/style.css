@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ============HEADER============= */
+header {
+  text-align: center;
+  line-height: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: rgb(103, 150, 103);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.linksNav {
+  display: inline-block;
+  width: 10%;
+  margin-top: 40px;
+  border-top: 2px solid black;
+}
+
+.linksNav:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.linksNav:hover {
+  color: white;
+  font-weight: bold;
+  border-top: 3px solid white;
+}
+
+/* =========MAIN=========== */
+main {
+  padding: 5%;
+  margin-top: 150px;
+  position: relative;
+}
+
+section {
+  margin-top: 50px;
+}
+
+h2 {
+  color: rgb(81, 119, 81);
+  font-size: 35px;
+}
+
+h3 {
+  color: rgb(81, 119, 81);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#esquerda,
+#direita {
+  display: inline-block;
+}
+
+#esquerda {
+  max-width: 70%;
+  margin-right: 2.5%;
+  padding-right: 2.5%;
+  border-right: 2px dashed rgb(81, 119, 81);
+}
+
+#direita {
+  max-width: 24%;
+  position: absolute;
+}
+
+#direita p {
+  margin-bottom: 20px;
+}
+#direita a {
+  background-color: rgb(139, 197, 139);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#direita a:hover {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: rgb(103, 150, 103);
+}
+
+/* Infos gerais */
+table {
+  display: inline-block;
+  margin-left: 20%;
+}
+
+table,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#verdeTabela {
+  color:rgb(81, 119, 81)
+}
+
+#stomatopoda {
+  margin-left: 20%;
+  border-radius: 50px;
+}
+
+#geral p {
+  margin-bottom: 20px;
+}
+
+/* Visão */
+#olho {
+  float: left;
+  padding-top: 5px;
+  padding-right: 20px;
+  border-radius: 50px;
+}
+
+/* Força */
+#soco {
+  float: right;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+}
+
+/* Referências */
+ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
+ul li:hover {
+  font-weight: bold;
+}
+
+/* ========FOOTER========== */
+footer {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(103, 150, 103);
+  font-weight: bold;
+}
