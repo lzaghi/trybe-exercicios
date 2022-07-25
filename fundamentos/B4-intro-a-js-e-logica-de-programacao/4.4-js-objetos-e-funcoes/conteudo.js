@@ -176,23 +176,95 @@
 // ================FOR/IN FOR/OF
 
 //            EXERCICIO 1
-let names = {
-  person1: 'João',
-  person2: 'Maria',
-  person3: 'Jorge',
-};
+// let names = {
+//   person1: 'João',
+//   person2: 'Maria',
+//   person3: 'Jorge',
+// };
 
-for (let keys in names) {
-  console.log("Olá", names[keys]);
+// for (let keys in names) {
+//   console.log("Olá", names[keys]);
+// }
+
+// //           EXERCICIO 2
+// let car = {
+//   model: 'A3 Sedan',
+//   manufacturer: 'Audi',
+//   year: 2020
+// };
+
+// for (let keys in car) {
+//   console.log(keys, ":", car[keys]);
+// }
+
+
+//====================FUNCTIONS
+// function soma(a, b) {
+//   return a + b;
+// }
+// console.log(soma(20, 40));
+
+// function sub(a, b) {
+//   return a - b;
+// }
+// console.log(sub(20, 40));
+
+// function mult(a, b) {
+//   return a * b;
+// }
+// console.log(mult(20, 40));
+
+// function div(a, b) {
+//   return a / b;
+// }
+// console.log(div(20, 40));
+
+// function mod(a, b) {
+//   return a % b;
+// }
+// console.log(mod(20, 40));
+
+
+// function compare2(a, b) {
+//   if (a > b) {
+//     return a
+//   }
+//   return b
+// }
+// console.log(compare2(30, 50));
+
+
+// function compare3(a, b, c) {
+//   if (a > b && a > c) {
+//     return a
+//   }
+//   else if (b > a && b > c) {
+//     return b
+//   }
+//   return c
+// }
+// console.log(compare3(130, 50, 120));
+
+
+// function check(x) {
+//   if (x > 0) {
+//     return "positive";
+//   }
+//   else if (x < 0) {
+//     return "negative";
+//   }
+//   return "zero"
+// }
+// console.log(check(0));
+
+
+function triangle(a, b, c) {
+    if (a < 0 || b < 0 || c < 0) {
+    return "Erro: ângulo inválido";
+  }
+  else if (a + b + c === 180) {
+    return true;
+  }
+  return false;
 }
-
-//           EXERCICIO 2
-let car = {
-  model: 'A3 Sedan',
-  manufacturer: 'Audi',
-  year: 2020
-};
-
-for (let keys in car) {
-  console.log(keys, ":", car[keys]);
-}
+console.log(triangle(50, 60, 10));
