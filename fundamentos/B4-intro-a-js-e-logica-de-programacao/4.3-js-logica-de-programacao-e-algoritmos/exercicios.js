@@ -106,11 +106,9 @@
 // for (let j = 0; j < espacos; j += 1) {
 //   let string = "";
 //   let repeticoes = espacos - j;
-//   let reps = 0;
 
 //   for (let i = 0; i < repeticoes; i += 1) {
 //     string += " ";
-//     reps += 1;
 //   }
   
 //   while (string.length < n) {
@@ -127,33 +125,66 @@
 // console.log(base);
 
 
-//                    EXERCICIO BONUS 4
+//                   EXERCICIO BONUS 4
+let n = 5;
+let espacos = n - (Math.ceil(n/2));
+for (let i = 0; i < espacos; i += 1) {
+  let string = "";
+  let repeticoes = espacos - i;
+  let reps = n
+
+  for (let j = 0; j < repeticoes; j += 1) {
+    string += " ";
+    reps -= 2
+  }
+
+  for (let k = 0; k < reps; k +=1) {
+    string += "*"
+  }
+  console.log(string);
+}
+
+let base = "";
+for (let k = 0; k < n; k += 1) {
+  base += "*";
+}
+console.log(base);
+
+
+
+
 
 //                   EXERCICIO BONUS 5
 
+
+
+
+
+
+
 //                   EXERCICIO BONUS 6
-let numero = 17;
-let array = [];
+// let numero = 17;
+// let array = [];
 
-for (let i = 2; i <= numero; i += 1) {
-  let counter = 0;
+// for (let i = 2; i <= numero; i += 1) {
+//   let counter = 0;
 
-  for (let j = 2; j <= i; j += 1) {
-    if (i % j === 0)
-    counter += 1
-  }
+//   for (let j = 2; j <= i; j += 1) {
+//     if (i % j === 0)
+//     counter += 1
+//   }
 
-  if (counter === 1) {
-    array.push(i);
-  }
-}
+//   if (counter === 1) {
+//     array.push(i);
+//   }
+// }
 
-let resposta = "O número " + numero + " não é primo";
+// let resposta = "O número " + numero + " não é primo";
 
-for (let k = 0; k < array.length; k +=1) {
-  if (array[k] === numero) {
-    resposta = "O número " + numero + " é primo";
-  }
-}
+// for (let k = 0; k < array.length; k +=1) {
+//   if (array[k] === numero) {
+//     resposta = "O número " + numero + " é primo";
+//   }
+// }
 
-console.log(resposta);
+// console.log(resposta);
