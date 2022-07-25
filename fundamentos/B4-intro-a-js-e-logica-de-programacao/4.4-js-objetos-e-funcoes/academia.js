@@ -1,0 +1,1 @@
+// https://github.com/tryber/academia-de-logica/blob/main/Dia4.4/script.js
