@@ -126,21 +126,52 @@
 
 
 //                   EXERCICIO BONUS 4
-let n = 5;
+// let n = 5;
+// let espacos = n - (Math.ceil(n/2));
+// for (let i = 0; i < espacos; i += 1) {
+//   let string = "";
+//   let repeticoes = espacos - i;
+//   let reps = n
+
+//   for (let j = 0; j < repeticoes; j += 1) {
+//     string += " ";
+//     reps -= 2
+//   }
+
+//   for (let k = 0; k < reps; k +=1) {
+//     string += "*"
+//   }
+//   console.log(string);
+// }
+
+// let base = "";
+// for (let k = 0; k < n; k += 1) {
+//   base += "*";
+// }
+// console.log(base);
+
+
+//                   EXERCICIO BONUS 5
+let n = 7;
 let espacos = n - (Math.ceil(n/2));
 for (let i = 0; i < espacos; i += 1) {
   let string = "";
   let repeticoes = espacos - i;
-  let reps = n
+  let reps = n - 2
 
   for (let j = 0; j < repeticoes; j += 1) {
     string += " ";
-    reps -= 2
+    reps -= 2;
   }
+  string += "*"
 
-  for (let k = 0; k < reps; k +=1) {
+  if (string.length < (Math.ceil(n/2))) {
+    for (let k = 0; k < reps; k+= 1){
+      string += " "
+    }
     string += "*"
   }
+  
   console.log(string);
 }
 
@@ -149,17 +180,6 @@ for (let k = 0; k < n; k += 1) {
   base += "*";
 }
 console.log(base);
-
-
-
-
-
-//                   EXERCICIO BONUS 5
-
-
-
-
-
 
 
 //                   EXERCICIO BONUS 6
