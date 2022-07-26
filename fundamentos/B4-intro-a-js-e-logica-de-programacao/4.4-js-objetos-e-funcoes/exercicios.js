@@ -124,17 +124,42 @@
 
 
 //                     EXERCICIO 4
-function maiorNome(array) {
+// function maiorNome(array) {
 
-  let maior = array[0].length;
-  let maiorNome = array[0]
+//   let maior = array[0].length;
+//   let maiorNome = array[0]
 
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i].length > maior) {
+//       maior = array[i].length;
+//       maiorNome = array[i]
+//     }
+//   }
+//   return maiorNome
+// }
+// console.log( maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']) );
+
+
+//                    EXERCICIO 5
+function maisRepete(array) {
+
+  let maiorCounter = 0;
+  let index = 0;
+  
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i].length > maior) {
-      maior = array[i].length;
-      maiorNome = array[i]
+    let counter = 0;
+
+    for (let j = 0; j <= i; j += 1){
+      if (array[j] === array[i]) {
+        counter += 1
+      }
+    }
+    if (counter > maiorCounter) {
+      maiorCounter = counter;
+      index = i
     }
   }
-  return maiorNome
+
+  return array[index]
 }
-console.log( maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']) );
+console.log( maisRepete([2, 3, 2, 5, 8, 2, 3, 8, 8, 8, 8, 8]) );
