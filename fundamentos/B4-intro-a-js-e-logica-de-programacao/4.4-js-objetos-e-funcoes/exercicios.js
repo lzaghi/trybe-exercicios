@@ -141,25 +141,38 @@
 
 
 //                    EXERCICIO 5
-function maisRepete(array) {
+// function maisRepete(array) {
 
-  let maiorCounter = 0;
-  let index = 0;
-  
-  for (let i = 0; i < array.length; i += 1) {
-    let counter = 0;
+//   let maiorCounter = 0;
+//   let index = 0;
 
-    for (let j = 0; j <= i; j += 1){
-      if (array[j] === array[i]) {
-        counter += 1
-      }
-    }
-    if (counter > maiorCounter) {
-      maiorCounter = counter;
-      index = i
-    }
+//   for (let i = 0; i < array.length; i += 1) {
+//     let counter = 0;
+
+//     for (let j = 0; j <= i; j += 1){
+//       if (array[j] === array[i]) {
+//         counter += 1
+//       }
+//     }
+//     if (counter > maiorCounter) {
+//       maiorCounter = counter;
+//       index = i
+//     }
+//   }
+
+//   return array[index]
+// }
+// console.log( maisRepete([2, 3, 2, 5, 8, 2, 3, 8, 8, 8, 8, 8]) );
+
+
+//                   EXERCICIO 6
+function somatorio(n) {
+  let soma = 0;
+
+  for (let i = 1; i <= n; i+= 1) {
+    soma += i
   }
 
-  return array[index]
+  return soma
 }
-console.log( maisRepete([2, 3, 2, 5, 8, 2, 3, 8, 8, 8, 8, 8]) );
+console.log(somatorio(5));
