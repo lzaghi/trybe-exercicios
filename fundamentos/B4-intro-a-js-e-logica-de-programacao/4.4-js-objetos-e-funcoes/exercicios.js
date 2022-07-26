@@ -42,28 +42,80 @@
 
 
 //                                    EXERCICIO 6
-let leitor = {
-  nome: 'Julia',
-  sobrenome: 'Pessoa',
-  idade: 21,
-  livrosFavoritos: [
-    {
-      titulo: 'O Pior Dia de Todos',
-      autor: 'Daniela Kopsch',
-      editora: 'Tordesilhas',
-    },
-  ],
-};
-console.log("O livro favorito da", leitor.nome, "se chama", leitor.livrosFavoritos[0].titulo);
+// let leitor = {
+//   nome: 'Julia',
+//   sobrenome: 'Pessoa',
+//   idade: 21,
+//   livrosFavoritos: [
+//     {
+//       titulo: 'O Pior Dia de Todos',
+//       autor: 'Daniela Kopsch',
+//       editora: 'Tordesilhas',
+//     },
+//   ],
+// };
+// console.log("O livro favorito da", leitor.nome, "se chama", leitor.livrosFavoritos[0].titulo);
 
-//                                   EXERCICIO 7
-leitor.livrosFavoritos.push({
-  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
-  autor: 'JK Rowling',
-  editora: 'Rocco',
-})
+// //                                   EXERCICIO 7
+// leitor.livrosFavoritos.push({
+//   titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+//   autor: 'JK Rowling',
+//   editora: 'Rocco',
+// })
 
-console.table(leitor);
+// console.table(leitor);
 
-//                                EXERCICIO 8
-console.log(leitor.nome, "tem", leitor.livrosFavoritos.length, "livros favoritos");
+// //                                EXERCICIO 8
+// console.log(leitor.nome, "tem", leitor.livrosFavoritos.length, "livros favoritos");
+
+
+// =======================FUNÇÕES
+
+//                                EXERCICIO 1
+// function verificaPalindromo(string) {
+//   let palavra = string
+//   let array = string.split("");
+  
+//   let arrayReverso = array.reverse();
+  
+//   let stringReverso = arrayReverso.join("");
+
+//   if (palavra === stringReverso) {
+//     return true
+//   }
+//   return false
+// }
+
+// console.log(verificaPalindromo('bola'));
+
+//                           EXERCICIO 2
+// function indiceMaiorValor(array) {
+
+//   let maior = array[0];
+//   let index = 0;
+//   for (let i = 1; i < array.length; i += 1) {
+    
+//     if (array[i] > maior) {
+//       maior = array[i];
+//       index = i;
+//     }
+//   }
+//   return index
+// }
+// console.log( indiceMaiorValor([12, 13, 6, 7, 10, 1, 77]) );
+
+//                        EXERCICIO 3
+function indiceMenorValor(array) {
+
+  let menor = array[0];
+  let index = 0;
+  for (let i = 1; i < array.length; i += 1) {
+    
+    if (array[i] < menor) {
+      menor = array[i];
+      index = i;
+    }
+  }
+  return index
+}
+console.log( indiceMenorValor([-12, -13, 6, 7, 10, 1, -77]) );
