@@ -166,13 +166,40 @@
 
 
 //                   EXERCICIO 6
-function somatorio(n) {
-  let soma = 0;
+// function somatorio(n) {
+//   let soma = 0;
 
-  for (let i = 1; i <= n; i+= 1) {
-    soma += i
-  }
+//   for (let i = 1; i <= n; i+= 1) {
+//     soma += i
+//   }
+//   return soma
+// }
+// console.log(somatorio(5));
 
-  return soma
-}
-console.log(somatorio(5));
+
+//                 EXERCICIO 7
+// function checaFinal(word, ending) {
+//   let wordArray = word.split('')
+//   let arrayInv = wordArray.reverse();
+//   // let wordInv = arrayInv.join('')
+
+//   let endingArray = ending.split('')
+//   let arrayInv2 = endingArray.reverse();
+//   let endingInv = arrayInv2.join('')
+
+//   let check = []
+//   for (let i = 0; i < ending.length; i += 1) {
+//     if (arrayInv2[i] === arrayInv[i]) {
+//       check.push(arrayInv2[i])
+//     }
+//   }
+
+//   if (check.join('') === endingInv) {
+//     return true
+//   }
+//   return false
+// }
+// console.log(checaFinal('Testeeee', 'steeee'));
+
+
+// ================ BONUS
