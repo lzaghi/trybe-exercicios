@@ -88,6 +88,7 @@
 
 // console.log(verificaPalindromo('bola'));
 
+
 //                           EXERCICIO 2
 // function indiceMaiorValor(array) {
 
@@ -104,18 +105,36 @@
 // }
 // console.log( indiceMaiorValor([12, 13, 6, 7, 10, 1, 77]) );
 
-//                        EXERCICIO 3
-function indiceMenorValor(array) {
 
-  let menor = array[0];
-  let index = 0;
-  for (let i = 1; i < array.length; i += 1) {
+//                        EXERCICIO 3
+// function indiceMenorValor(array) {
+
+//   let menor = array[0];
+//   let index = 0;
+//   for (let i = 1; i < array.length; i += 1) {
     
-    if (array[i] < menor) {
-      menor = array[i];
-      index = i;
+//     if (array[i] < menor) {
+//       menor = array[i];
+//       index = i;
+//     }
+//   }
+//   return index
+// }
+// console.log( indiceMenorValor([-12, -13, 6, 7, 10, 1, -77]) );
+
+
+//                     EXERCICIO 4
+function maiorNome(array) {
+
+  let maior = array[0].length;
+  let maiorNome = array[0]
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i].length > maior) {
+      maior = array[i].length;
+      maiorNome = array[i]
     }
   }
-  return index
+  return maiorNome
 }
-console.log( indiceMenorValor([-12, -13, 6, 7, 10, 1, -77]) );
+console.log( maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']) );
