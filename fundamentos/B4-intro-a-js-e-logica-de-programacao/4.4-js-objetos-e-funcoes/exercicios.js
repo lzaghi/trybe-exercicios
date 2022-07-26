@@ -203,3 +203,25 @@
 
 
 // ================ BONUS
+function numero(string) {
+  let valores = {
+    'I': 1,
+    'V': 5,
+    'X': 10,
+    'L': 40,
+    'C': 100,
+    'D': 500,
+    'M': 1000,
+  }
+
+  let numeroRomano = string.toUpperCase();
+
+  let tamanho = numeroRomano.length;
+
+  let soma = valores[numeroRomano[tamanho - 1]];
+  let atual = valores[numeroRomano[tamanho - 1]];
+
+  for (let i = 2; i < length; i += 1) {
+    let proximo = valores[numeroRomano[tamanho - i]]
+  }
+}
