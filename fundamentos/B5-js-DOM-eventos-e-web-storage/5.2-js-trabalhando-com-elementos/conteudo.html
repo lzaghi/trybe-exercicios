@@ -27,6 +27,7 @@
   </main>
 
   <script>
+    // PARTE 1
     // Acesse o elemento elementoOndeVoceEsta.
     console.log(document.getElementById("elementoOndeVoceEsta"));
 
@@ -58,6 +59,57 @@
     // Agora acesse o terceiroFilho a partir de pai.
     let filho3pai = document.getElementById("pai").lastElementChild.previousElementSibling;
     console.log(filho3pai);
+
+
+    // PARTE II
+    // Crie um irmão para elementoOndeVoceEsta.
+    let irmaoOndeVoceEsta = document.createElement('section');
+    document.getElementById("pai").appendChild(irmaoOndeVoceEsta)
+    console.log(irmaoOndeVoceEsta);
+
+    // Crie um filho para elementoOndeVoceEsta.
+    let filhoOndeVoceEsta = document.createElement('p');
+    document.getElementById("elementoOndeVoceEsta").appendChild(filhoOndeVoceEsta);
+    console.log(filhoOndeVoceEsta);
+
+    // Crie um filho para primeiroFilhoDoFilho.
+    let novoFilho = document.createElement('p');
+    document.getElementById("primeiroFilhoDoFilho").appendChild(novoFilho);
+    console.log(novoFilho);
+
+    // A partir desse filho criado, acesse terceiroFilho.
+    let novoFilhoPartida = document.querySelector("#primeiroFilhoDoFilho p");
+    let filho3Chegada = novoFilhoPartida.parentNode.parentNode.nextElementSibling;
+    console.log(filho3Chegada);
+
+
+    // PARTE III
+    //Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+    document.getElementById("pai").removeChild(document.getElementById("primeiroFilho"))
+
+    document.getElementById("pai").removeChild(document.getElementById("terceiroFilho"))
+
+    document.getElementById("pai").removeChild(document.getElementById("quartoEUltimoFilho"))
+
+    document.getElementById("pai").removeChild(att);
+
+    document.getElementById("pai").removeChild(irmaoOndeVoceEsta);
+
+    document.getElementById("elementoOndeVoceEsta").removeChild(document.getElementById("segundoEUltimoFilhoDoFilho"))
+
+
+    // GABARITO PARTE III:
+    // const pai = document.getElementById('pai');
+
+    // for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+    //   const currentChildren = pai.childNodes[index];
+    //   if (currentChildren.id !== 'elementoOndeVoceEsta') {
+    //     currentChildren.remove();
+    //   }
+    // }
+
+    // const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    // segundoEUltimoFilhoDoFilho.remove();
 
   </script>
 </body>
