@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+
+      Atenção!
+
+      <section id="terceiroFilho"></section>
+
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+
+  <script>
+    // Acesse o elemento elementoOndeVoceEsta.
+    console.log(document.getElementById("elementoOndeVoceEsta"));
+
+    // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    let papai = document.getElementById("elementoOndeVoceEsta").parentNode;
+    papai.style.color = "red";
+    console.log(papai);
+
+    // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    let filhoDoFilho1 = document.getElementById("primeiroFilhoDoFilho");
+    filhoDoFilho1.innerText = "texto adicionado aqui :)"
+    console.log(filhoDoFilho1);
+
+    // Acesse o primeiroFilho a partir de pai.
+    let filho1 = document.getElementById("pai").firstElementChild;
+    console.log(filho1);
+
+    // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    console.log(papai.firstElementChild);
+
+    // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    let att = document.getElementById("elementoOndeVoceEsta").nextSibling;
+    console.log(att);
+
+    // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    let filho3 = document.getElementById("elementoOndeVoceEsta").nextElementSibling;
+    console.log(filho3);
+
+    // Agora acesse o terceiroFilho a partir de pai.
+    let filho3pai = document.getElementById("pai").lastElementChild.previousElementSibling;
+    console.log(filho3pai);
+
+  </script>
+</body>
+
+</html>
