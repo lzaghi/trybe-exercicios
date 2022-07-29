@@ -30,14 +30,16 @@ function createDaysOfTheMonth() {
     
     dayListItem.innerHTML = days;
 
-    if (days === 24 || days === 25 || days === 31) {
+    if (days === 25) {
+      dayListItem.className = 'day holiday friday';
+    }else if (days === 24 || days === 31) {
       dayListItem.className = 'day holiday';
     }
-    else if (days === 4 || days === 11 || days === 18 || days === 25) {
+    else if (days === 4 || days === 11 || days === 18) {
       dayListItem.className = 'day friday';
     }
     else {
-      dayListItem.className = 'day';
+      dayListItem.className = 'day'
     }
 
     monthDaysList.appendChild(dayListItem);
