@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      let titulo = document.createElement('h1');
+      titulo.innerText = "Exercício 5.2 - JavaScript DOM"
+
+      let corpo = document.getElementsByTagName('body')[0];              //só um document.body resolve!!!
+      corpo.appendChild(titulo);
+    
+      // Adicione a tag main com a classe main-content como filho da tag body;
+      let principal = document.createElement('main');
+      
+      corpo.appendChild(principal);
+
+      document.getElementsByTagName('main')[0].className = 'main-content'     //principal.className funcionaria!
+      
+      // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      let secaoC = document.createElement('section');
+
+      let main = document.getElementsByClassName('main-content')[0];
+      main.appendChild(secaoC);
+
+      document.getElementsByTagName('section')[0].className = 'center-content';    //msm coisa, secaoC.className rola
+
+      // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      let pCriar = document.createElement('p');
+
+      let sectionC = document.getElementsByClassName('center-content')[0];
+      sectionC.appendChild(pCriar)                                                    //secaoC.append dava, e pCriar.innerText dava!
+
+      let paragraphC = document.querySelector(".center-content p");
+      paragraphC.innerText = "a trybe é daora demais";
+
+      // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      let secaoE = document.createElement('section')
+      
+      main.appendChild(secaoE);
+
+      document.getElementsByTagName('section')[1].className = 'left-content';
+
+      // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      let secaoD = document.createElement('section')
+      
+      main.appendChild(secaoD);
+
+      document.getElementsByTagName('section')[2].className = 'right-content';
+
+      // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      let imgCriar = document.createElement('img');                                        //imgCriar.className ou .src dava, e secaoE.append tb!
+
+      let sectionE = document.getElementsByClassName('left-content')[0];
+      sectionE.appendChild(imgCriar);
+
+      document.getElementsByTagName('img')[0].className = "small-image";
+      document.getElementsByTagName('img')[0].src = "https://picsum.photos/200"
+
+      //  Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      let listaCriar = document.createElement('ul');
+
+      let sectionD = document.getElementsByClassName('right-content')[0];
+      sectionD.appendChild(listaCriar)
+
+      let array = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      let listaU = document.getElementsByTagName('ul')[0];
+
+      for (let i = 0; i < array.length; i += 1) {
+        let itemCriar = document.createElement('li');
+
+        listaU.appendChild(itemCriar);
+
+        listaU.lastElementChild.innerText = array[i];               //automaticamente vai pro fim, .lastElementChild indiferente!
+      }
+
+      // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for (let i = 0; i < 3; i += 1) {
+        let titulinhoCriar = document.createElement('h3');
+
+        main.appendChild(titulinhoCriar)
+
+        //itulinhoCriar.innerHTML = 'oi'
+      }
+
+
+      // Adicione a classe title na tag h1 criada;
+      let h1 = document.getElementsByTagName('h1')[0];      //querySelector dava tb ne
+      h1.className = "title"
+
+      // Adicione a classe description nas 3 tags h3 criadas;
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.querySelectorAll('h3')[i];      // byTagName tb
+        h3.className = "description"
+      }
+
+      // Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+      main.removeChild(sectionE)
+
+      // Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+      sectionD.style.marginRight = "auto"
+
+      // Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+      sectionC.parentNode.style.backgroundColor = "green"
+
+      // Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+      let listaLI = document.querySelectorAll('li')                              // OU apenas duas linhas de: listaU.lasChild.remove() 
+
+      for (let i = 0; i < listaLI.length; i += 1)
+      if (listaLI[i].innerText.includes('nove') || listaLI[i].innerText.includes('dez')) {
+        listaU.removeChild(listaLI[i])
+      }
+    </script>
+  </body>
+</html>
