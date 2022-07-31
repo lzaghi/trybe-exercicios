@@ -113,3 +113,19 @@ function mudaTexto() {
 }
 
 botaoSextas.addEventListener('click', mudaTexto);
+
+// Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+const dias = document.querySelectorAll('.day')
+
+function aumenta(event) {
+  event.target.style.fontSize = '40px'
+}
+
+function diminui(event) {
+  event.target.style.fontSize = '20px'
+}
+
+for (let i = 0; i < dias.length; i += 1) {
+  dias[i].addEventListener('mouseover', aumenta)
+  dias[i].addEventListener('mouseleave', diminui)
+}
