@@ -175,3 +175,23 @@ function selecionaTarefa(event) {
 for (let k = 0; k < legendas.length; k += 1) {
   legendas[k].addEventListener('click', selecionaTarefa)
 }
+
+// Implemente uma função que atribua a cor da tarefa ao dia do calendário.
+// Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119)
+
+function atribuiTarefa(event) {
+  const cor = document.querySelector('.task.selected').style.backgroundColor;
+
+  if (event.target.style.color !== cor) {
+    event.target.style.color = cor;
+  }
+  else if (event.target.style.color == cor) {
+    event.target.style.color = 'rgb(119,119,119)'
+  }
+}
+
+for (let l = 0; l < dias.length; l += 1) {
+  dias[l].addEventListener('click', atribuiTarefa)
+}
+
