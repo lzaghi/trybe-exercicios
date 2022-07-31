@@ -56,13 +56,14 @@ const divBotao = document.querySelector('.buttons-container')
 
 function criaBotao(string) {
   const botao = document.createElement('button');
-  botao.id = "btn-holiday";
-  botao.innerHTML = string
-
+  botao.innerHTML = string;
   divBotao.appendChild(botao);
 }
 
 criaBotao("Feriados")
+
+const Feriados = document.querySelectorAll(".buttons-container button")[0];
+Feriados.id = "btn-holiday";
 
 // Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday".
 // Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday"
@@ -88,3 +89,10 @@ function mudaCorBackground() {
 
 botaoFeriados.addEventListener('click', mudaCorBackground);
 
+// Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira". Sua função deve receber como parâmetro a string "Sexta-feira".
+// Adicione a esse botão o ID "btn-friday";
+// Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
+criaBotao("Sexta-feira")
+
+const Sextas = document.querySelectorAll(".buttons-container button")[0];
+Sextas.id = "btn-holiday";
