@@ -211,3 +211,41 @@ for (let l = 0; l < dias.length; l += 1) {
   dias[l].addEventListener('click', atribuiTarefa)
 }
 
+// Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+// Se nenhum caractere for inserido no campo input, a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+// Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+const botaoAdicionar = document.getElementById('btn-add');
+const divCompromissos = document.querySelector('.task-list')
+const input = document.getElementById('task-input')
+
+function addCompromissoPeloBotao() {
+  if (input.value.length > 0) {
+    
+    const compromisso = document.createElement('li')
+    compromisso.className = 'tarefa'
+    compromisso.innerHTML = input.value;
+    divCompromissos.appendChild(compromisso)
+
+    input.value = '';
+  }
+  else {
+    alert('Erro: campo de novo compromisso vazio')
+  }
+}
+
+botaoAdicionar.addEventListener('click', addCompromissoPeloBotao)
+
+
+function addCompromissoPeloEnter(event) {
+  if (event.key == 'Enter') {
+    
+    const compromisso = document.createElement('li')
+    compromisso.className = 'tarefa'
+    compromisso.innerHTML = input.value;
+    divCompromissos.appendChild(compromisso)
+
+    input.value = '';
+  }
+}
+
+input.addEventListener('keyup', addCompromissoPeloEnter)
