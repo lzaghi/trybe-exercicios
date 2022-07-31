@@ -94,5 +94,6 @@ botaoFeriados.addEventListener('click', mudaCorBackground);
 // Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
 criaBotao("Sexta-feira")
 
-const Sextas = document.querySelectorAll(".buttons-container button")[0];
-Sextas.id = "btn-holiday";
+const Sextas = document.querySelectorAll(".buttons-container button")[1];
+Sextas.id = "btn-friday";
+
