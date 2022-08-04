@@ -1,0 +1,15 @@
+/* font-family: 'Comic Neue', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body {
+  font-family: sans-serif;
+}
+
+#dark,
+#tamanho,
+#espaco,
+#fonte {
+  margin-left: 5%;
+}
+
