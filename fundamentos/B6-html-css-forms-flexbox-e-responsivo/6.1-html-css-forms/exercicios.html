@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrybeTrip</title>
+</head>
+
+<body>
+  <h1 id="title">TrybeTrip</h1>
+
+  <fieldset id="field">
+    <legend id="legenda">Formulário de cadastro</legend>
+
+    <br>
+
+    <form action="" method="GET">
+      <label for="nome-completo">Nome Completo:
+        <input type="text" name="nome" id="nome-completo" required autofocus minlength="10" maxlength="40" placeholder="10 a 40 caracteres">
+      </label>
+  
+      <br>
+      <br>
+  
+      <label for="e-mail">E-mail:
+        <input type="email" name="email" id="e-mail" required minlength="10" maxlength="50" placeholder="10 a 50 caracteres">
+      </label>
+  
+      <br>
+      <br>
+      
+      <p>Destino preferido:</p>
+      <label for="dest1">
+        <input type="radio" name="destino" value="Cidade" id="dest1">
+      Cidade</label>
+      <label for="dest2">
+        <input type="radio" name="destino" value="Campo" id="dest2">
+      Campo</label>
+      <label for="dest3">
+        <input type="radio" name="destino" value="Praia" id="dest3">
+      Praia</label>
+      <label for="dest4">
+        <input type="radio" name="destino" value="Montanha" id="dest4">
+      Montanha</label>
+  
+      <br>
+      <br>
+  
+      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concuso TrybeTrip?</p>
+      <textarea name="motivacao" id="text" cols="60" rows="6" placeholder="Limite de 500 caracteres :)" maxlength="500" required></textarea>
+  
+      <br>
+      <br>
+  
+      <label for="">Qual a melhor data para realizar sua viagem?
+        <input type="date" name="data" min="2022-08-04" required id="data">
+      </label>
+  
+      <br>
+      <br>
+      <br>
+
+      <label for="check-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+        <input type="checkbox" name="oportunidades" id="check-1" class="check">
+      </label>
+      <br>
+      <label for="check-2">Corcordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        <input type="checkbox" name="imagens" id="check-2" required class="check">
+      </label>
+
+      <br>
+      <br>
+    </fieldset>
+    
+    <br>
+
+    <button type="submit" id="botao-enviar" disabled>Enviar informações</button>
+
+    <button type="reset">Limpar</button>
+  </form>
+
+  <script src="./exercicios.js"></script>
+</body>
+
+</html>
