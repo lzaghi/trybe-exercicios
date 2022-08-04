@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrybeTrip</title>
+</head>
+
+<body>
+  <h1 id="title">TrybeTrip</h1>
+
+  <fieldset id="field">
+    <legend id="legenda">Formulário de cadastro</legend>
+
+    <br>
+
+    <form action="" method="GET">
+      <label for="nome-completo">Nome Completo:
+        <input type="text" name="nome" id="nome-completo" required autofocus placeholder="10 a 40 caracteres">
+      </label>
+  
+      <br>
+      <br>
+  
+      <label for="e-mail">E-mail:
+        <input type="email" name="email" id="e-mail" required placeholder="10 a 50 caracteres">
+      </label>
+  
+      <br>
+      <br>
+  
+      <label for="">Destino preferido:
+        <select name="destino" id="destino">
+          <option value="cdd" class="dest">Cidade</option>
+          <option value="cmp" class="dest">Campo</option>
+          <option value="pra" class="dest">Praia</option>
+          <option value="mtn" class="dest">Montanha</option>
+        </select>
+      </label>
+  
+      <br>
+      <br>
+  
+      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concuso TrybeTrip?</p>
+      <textarea name="motivacao" id="text" cols="60" rows="6" placeholder="Limite de 500 caracteres :)" maxlength="500" required></textarea>
+  
+      <br>
+      <br>
+  
+      <label for="">Qual a melhor data para realizar sua viagem?
+        <input type="date" name="data" min="2022-08-04" required id="data">
+      </label>
+  
+      <br>
+      <br>
+      <br>
+
+      <input type="checkbox" name="oportunidades" id="check-1" checked class="check">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+      <br>
+      <input type="checkbox" name="imagens" id="check-2" checked required class="check">Corcordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+
+      <br>
+      <br>
+      <br>
+
+      <button type="submit" id="botao-enviar">Enviar informações</button>
+
+      <br>
+      <br>
+
+      <button type="reset">Limpar</button>
+    </fieldset>
+  </form>
+
+  <script src="./exercicios.js"></script>
+</body>
+
+</html>
