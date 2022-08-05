@@ -48,4 +48,5 @@ document.getElementById('data').DatePickerX.init( {
   minDate: Date(2022, 5, 8),
   todayButton: false,
   clearButton: false,
+  format: 'dd/mm/yyyy',
 });
