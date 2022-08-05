@@ -6,82 +6,97 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrybeTrip</title>
+
+  <link rel="stylesheet" href="bulma-0.9.4/package/css/bulma.min.css">
 </head>
 
 <body>
-  <h1 id="title">TrybeTrip</h1>
+  <h1 id="title" class="title is-1 has-text-centered">TrybeTrip</h1>
+  
+  <br>
 
-  <fieldset id="field">
-    <legend id="legenda">Formulário de cadastro</legend>
 
-    <br>
+  <fieldset id="field" class="card-content">
+    <legend id="legenda" class="subtitle is-4">Formulário de cadastro</legend>
+
 
     <form action="" method="GET">
-      <label for="nome-completo">Nome Completo:
-        <input type="text" name="nome" id="nome-completo" required autofocus minlength="10" maxlength="40" placeholder="10 a 40 caracteres">
-      </label>
-  
+      <div class="field">
+        <label for="nome-completo" class="label">Nome Completo:
+        </label>
+      </div>  
+      <div class="control">
+        <input class="input is-rounded" type="text" name="nome" id="nome-completo" required autofocus minlength="10" maxlength="40" placeholder="10 a 40 caracteres">
+      </div>
+      
       <br>
       <br>
-  
-      <label for="e-mail">E-mail:
-        <input type="email" name="email" id="e-mail" required minlength="10" maxlength="50" placeholder="10 a 50 caracteres">
-      </label>
+
+      <div class="field">
+        <label for="e-mail" class="label">E-mail:
+        </label>
+      </div>  
+      <div class="control">
+        <input class="input is-rounded" type="email" name="email" id="e-mail" required minlength="10" maxlength="50" placeholder="10 a 50 caracteres">
+      </div>
   
       <br>
       <br>
       
-      <p>Destino preferido:</p>
+      <p class="label">Destino preferido:</p>
       <label for="dest1">
-        <input type="radio" name="destino" value="Cidade" id="dest1">
+        <input class="radio" type="radio" name="destino" value="Cidade" id="dest1">
       Cidade</label>
       <label for="dest2">
-        <input type="radio" name="destino" value="Campo" id="dest2">
+        <input class="radio" type="radio" name="destino" value="Campo" id="dest2">
       Campo</label>
       <label for="dest3">
-        <input type="radio" name="destino" value="Praia" id="dest3">
+        <input class="radio" type="radio" name="destino" value="Praia" id="dest3">
       Praia</label>
       <label for="dest4">
-        <input type="radio" name="destino" value="Montanha" id="dest4">
+        <input class="radio" type="radio" name="destino" value="Montanha" id="dest4">
       Montanha</label>
   
       <br>
       <br>
   
-      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concuso TrybeTrip?</p>
-      <textarea name="motivacao" id="text" cols="60" rows="6" placeholder="Limite de 500 caracteres :)" maxlength="500" required></textarea>
+      <p class="label">Por que você deveria ser a pessoa desenvolvedora a ganhar o concuso TrybeTrip?</p>
+      <textarea class="textarea" name="motivacao" id="text" cols="60" rows="6" placeholder="Limite de 500 caracteres :)" maxlength="500" required></textarea>
   
       <br>
       <br>
   
-      <label for="">Qual a melhor data para realizar sua viagem?
+      <label for="" class="label">Qual a melhor data para realizar sua viagem?
         <input type="date" name="data" min="2022-08-04" required id="data">
       </label>
   
       <br>
       <br>
-      <br>
 
-      <label for="check-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
-        <input type="checkbox" name="oportunidades" id="check-1" class="check">
-      </label>
-      <br>
-      <label for="check-2">Corcordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
-        <input type="checkbox" name="imagens" id="check-2" required class="check">
+      <label for="check-1" class="label">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+        <input class="checkbox" type="checkbox" name="oportunidades" id="check-1" class="check">
       </label>
 
-      <br>
+      <label for="check-2" class="label">Corcordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        <input class="checkbox" type="checkbox" name="imagens" id="check-2" required class="check">
+      </label>
+
       <br>
     </fieldset>
     
     <br>
 
-    <button type="submit" id="botao-enviar" disabled>Enviar informações</button>
-
-    <button type="reset">Limpar</button>
+    <div class="field is-grouped card-content">
+      <div class="control">
+        <button class="button is-success" type="submit" id="botao-enviar" disabled>Enviar informações</button>
+      </div>
+      <div class="control">
+        <button class="button is-success is-light" type="reset">Limpar</button>
+      </div>
+    </div>
   </form>
 
-  <script src="./exercicios.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
