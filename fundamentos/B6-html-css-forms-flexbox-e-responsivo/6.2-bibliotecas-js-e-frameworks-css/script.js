@@ -41,3 +41,4 @@ window.onload = function() {
   const checkImagens = document.getElementById('check-2')
   checkImagens.addEventListener('change', enableSubmit)
 }
+j
