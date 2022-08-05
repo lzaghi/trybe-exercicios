@@ -41,4 +41,11 @@ window.onload = function() {
   const checkImagens = document.getElementById('check-2')
   checkImagens.addEventListener('change', enableSubmit)
 }
-j
+
+
+document.getElementById('data').DatePickerX.init( {
+  mondayFirst: false,
+  minDate: Date(2022, 5, 8),
+  todayButton: false,
+  clearButton: false,
+});
