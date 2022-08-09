@@ -41,3 +41,65 @@ body {
   list-style: none;
   margin-right: 10px;
 }
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  flex-basis: 700px;
+  flex: 10;
+  
+}
+
+.movie-container h2 {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+
+.card-container div {
+  align-items: center;
+  background-color: #5C687C;
+  border: black solid 1px;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  margin: 10px;
+  border: 1px solid red;
+  flex-basis: 16%;
+  flex: 1 16%;
+  
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  flex-basis: 350px;
+  border: 1px solid red;
+  justify-content: center;
+  flex: 3;
+}
+
+.aside-container h3, h4 {
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+.aside-container p {
+  margin: 10px 0;
+  text-align: justify;
+}
