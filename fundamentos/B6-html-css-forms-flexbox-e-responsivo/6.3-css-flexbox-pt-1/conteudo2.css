@@ -1,0 +1,82 @@
+/* .box {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 50px;
+  height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 20%;
+}
+
+.box-container {
+  background-color: #0fa36b;
+  display: flex;
+  height: 500px;
+  ADICIONE AQUI SEUS TESTES
+  flex-direction: column;
+  justify-content: end;
+} */
+
+/* .box-one {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 70px;
+  min-height: 80px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-two {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 50px;
+  min-height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-three {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 30px;
+  margin: 10px 5px;
+  min-height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-container {
+  background-color: #0fa36b;
+  display: flex;
+  height: 500px;
+  ADICIONE AQUI SEUS TESTES
+  flex-direction: row;
+  align-items: baseline;
+} */
+
+.box {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 50px;
+  min-height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 30%;
+}
+
+.box-container {
+  /* ADICIONE AQUI SEUS TESTES */
+  background-color: #0fa36b;
+  display: flex;
+  flex-wrap: wrap;
+  height: 600px;
+  flex-direction: column;
+  align-content: center;
+}
