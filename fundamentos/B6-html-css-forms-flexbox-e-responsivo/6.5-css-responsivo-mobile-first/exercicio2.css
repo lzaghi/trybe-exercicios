@@ -73,3 +73,27 @@ footer {
   padding: 6%;
   background-color: rgb(75, 77, 77);
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header p {
+    font-size: 35px;
+  }
+
+  .asides {
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside-one {
+    /* border: 1px solid red; */
+    margin-top: 0;
+  }
+
+  .aside-two {
+    /* border: 1px solid red; */
+    max-width: 40%;
+  }
+}
+
