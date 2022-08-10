@@ -65,6 +65,9 @@ figcaption {
     font-size: 32px;
   }
 
+  figure {
+    width: 45%;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -83,11 +86,11 @@ figcaption {
     font-size: 37px;
   }
 
-  main h2 {
-    padding-left: 73px;
+  section {
+    justify-content: space-between;
   }
 
-  section {
-    justify-content: space-around;
+  figure {
+    width: 30%;
   }
 }
