@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: whitesmoke;
+  background-color: rgb(119, 126, 126);
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+main {
+  margin: 6%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(75, 77, 77);
+}
+
+header p {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+header nav {
+  /* border: 1px solid red; */
+  width: 80%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+aside {
+  margin-bottom: 50px;
+}
+
+.aside-one {
+  margin-top: 50px;
+}
+
+aside h2 {
+  margin-bottom: 10px;
+}
+
+.aside-two {
+  text-align: end;
+}
+
+.main-content p {
+  margin-bottom: 45px;
+}
+
+footer {
+  padding: 6%;
+  background-color: rgb(75, 77, 77);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header p {
+    font-size: 35px;
+  }
+
+  .asides {
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside-one {
+    /* border: 1px solid red; */
+    margin-top: 0;
+  }
+
+  .aside-two {
+    /* border: 1px solid red; */
+    max-width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 21px;
+  }
+
+  header p {
+    font-size: 40px;
+  }
+
+  .asides {
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside-one {
+    /* border: 1px solid red; */
+    margin-top: 0;
+  }
+
+  .paragraphs {
+    display: flex;
+    flex: wrap;
+    width: 100%;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+  }
+
+  .paragraphs-1 {
+    max-width: 48%;
+    /* border: 1px solid red; */
+  }
+
+  .paragraphs-2 {
+    max-width: 48%;
+    /* border: 1px solid red; */
+  }
+
+  footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
