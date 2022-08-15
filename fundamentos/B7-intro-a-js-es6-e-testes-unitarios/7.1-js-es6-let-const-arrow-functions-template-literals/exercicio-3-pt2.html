@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContaCliques</title>
+  </head>
+
+  <body>
+    <p id="contador">0</p>
+
+    <button id="botao">click aqui!</button>
+
+    <script>
+      const botao = document.getElementById('botao');
+      const contador = document.getElementById('contador');
+
+      botao.addEventListener('click', () => contador.innerHTML = parseInt(contador.innerHTML) + 1)
+    </script>
+  </body>
+
+</html>
