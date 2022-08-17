@@ -170,3 +170,42 @@ const verifyPair = (objeto, chave, valor) => {
 // console.log(verifyPair(lesson3, 'turno', 'manhã'));
 
 
+// ========= BONUS 1
+// console.log(allLessons);
+
+const estudantesPorMateria = (objeto, materia) => {
+  let total = 0;
+  for (let keys in objeto) {
+    if (objeto[keys].materia == materia ) {
+      total += objeto[keys].numeroEstudantes
+    }
+  }
+  return total
+}
+// console.log(estudantesPorMateria(allLessons, 'Matemática'));
+
+
+// ========== BONUS 2
+const report = (objeto, professor) => {
+  let alunos = 0;
+  for (let keys in objeto) {
+    if (objeto[keys].professor == professor ) {
+      alunos += objeto[keys].numeroEstudantes
+    }
+  }
+  
+  let materias = [];
+  for (let keys in objeto) {
+    if (objeto[keys].professor == professor ) {
+      materias.push(objeto[keys].materia) 
+    }
+  }
+
+  let report = {};
+  report.professor = professor;
+  report.aulas = materias;
+  report.estudantes = alunos;
+
+  return report
+}
+console.log(report(allLessons, 'Maria Clara'));
