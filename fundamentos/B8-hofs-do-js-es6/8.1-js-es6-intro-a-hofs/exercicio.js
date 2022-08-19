@@ -30,7 +30,7 @@
 // };
 
 // const resultado = (apostado, callback) => {
-//   let sorteado = (Math.random() * 5) + 1;
+//   let sorteado = Math.floor((Math.random() * 5) + 1);
 //   return callback(apostado, sorteado);
 // }
 
