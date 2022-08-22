@@ -106,11 +106,25 @@ function booksOrderedByReleaseYearDesc() {
 function everyoneWasBornOnSecXX() {
   return books.every((element) => element.author.birthYear > 1900 && element.author.birthYear <= 2000)
 }
-console.log(everyoneWasBornOnSecXX());
+// console.log(everyoneWasBornOnSecXX());
 
 
 // EXERCICIO 6
 function someBookWasReleaseOnThe80s() {
   return books.some((element) => element.releaseYear >= 1980 && element.releaseYear < 1990)
 }
-console.log(someBookWasReleaseOnThe80s());
+// console.log(someBookWasReleaseOnThe80s());
+
+
+// EXERCICIO 7
+function authorUnique() {
+  return books.every((elementEvery) => 
+    !books.some((elementSome) => 
+      (elementSome.author.birthYear === elementEvery.author.birthYear)
+      && (elementSome.author.name !== elementEvery.author.name)
+    )
+  )
+}
+console.log(authorUnique());
+
+const expectedResult = false;
