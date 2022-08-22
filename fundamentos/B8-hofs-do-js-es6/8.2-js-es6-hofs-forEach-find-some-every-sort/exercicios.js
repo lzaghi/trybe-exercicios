@@ -66,7 +66,7 @@ const books = [
 function authorBornIn1947() {
   return books.find((element) => element.author.birthYear === 1947)                 // ou ja bota o .author.name aqui!!!!
 }
-console.log(authorBornIn1947());
+// console.log(authorBornIn1947());
 console.log(`O nome do autor nascido em 1947 é ${authorBornIn1947().author.name}`);
 
 
@@ -86,3 +86,10 @@ function smallerName() {
   return nameBook;
 }
 console.log(smallerName());
+
+
+// EXERCICIO 3
+function getNamedBook() {
+  return books.find((element) => element.name.length === 26);
+}
+console.log(getNamedBook());
