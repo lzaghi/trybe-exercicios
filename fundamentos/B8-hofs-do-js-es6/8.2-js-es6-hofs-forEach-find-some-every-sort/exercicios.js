@@ -67,7 +67,7 @@ function authorBornIn1947() {
   return books.find((element) => element.author.birthYear === 1947)                 // ou ja bota o .author.name aqui!!!!
 }
 // console.log(authorBornIn1947());
-console.log(`O nome do autor nascido em 1947 é ${authorBornIn1947().author.name}`);
+// console.log(`O nome do autor nascido em 1947 é ${authorBornIn1947().author.name}`);
 
 
 // EXERCICIO 2
@@ -85,18 +85,25 @@ function smallerName() {
 
   return nameBook;
 }
-console.log(smallerName());
+// console.log(smallerName());
 
 
 // EXERCICIO 3
 function getNamedBook() {
   return books.find((element) => element.name.length === 26);
 }
-console.log(getNamedBook());
+// console.log(getNamedBook());
 
 
 // EXERCICIO 4
 function booksOrderedByReleaseYearDesc() {
   return books.sort((a, b) => b.releaseYear - a.releaseYear);
 }
-console.log(booksOrderedByReleaseYearDesc());
+// console.log(booksOrderedByReleaseYearDesc());
+
+
+// EXERCICIO 5
+function everyoneWasBornOnSecXX() {
+  return books.every((element) => element.author.birthYear > 1900 && element.author.birthYear <= 2000)
+}
+console.log(everyoneWasBornOnSecXX());
