@@ -67,3 +67,15 @@ function formatedBookNames() {
 }
 console.log(formatedBookNames());
 
+
+// EXERCICIO 2
+function nameAndAge() {
+  return books.map((element) => { 
+    return { 
+      age: element.releaseYear - element.author.birthYear, 
+      author: element.author.name
+    } 
+  }).sort((a, b) => a.age - b.age)
+}
+
+console.log(nameAndAge());
