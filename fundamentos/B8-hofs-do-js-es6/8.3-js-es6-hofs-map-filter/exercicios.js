@@ -100,4 +100,12 @@ function fantasyOrScienceFictionAuthors() {
   return books.filter((element) => element.genre === 'Fantasia' || element.genre === 'Ficção Científica')
     .map((element) => element.author.name)
 }
-console.log(fantasyOrScienceFictionAuthors());
+// console.log(fantasyOrScienceFictionAuthors());
+
+
+// EXERCICIO 6
+function oldBooks() {
+  return books.filter((element) => 2022 - element.releaseYear > 60)
+    .map((element) => element.name)
+}
+console.log(oldBooks());
