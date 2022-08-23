@@ -117,14 +117,29 @@ function someBookWasReleaseOnThe80s() {
 
 
 // EXERCICIO 7
-function authorUnique() {
-  return books.every((elementEvery) => 
-    !books.some((elementSome) => 
-      (elementSome.author.birthYear === elementEvery.author.birthYear)
-      && (elementSome.author.name !== elementEvery.author.name)
-    )
-  )
-}
-console.log(authorUnique());
+// function authorUnique() {
+//   return books.every((elementEvery) => {
+//     books.some((elementSome) => {
+//       (elementSome.author.birthYear === elementEvery.author.birthYear)
+//       && (elementSome.author.name !== elementEvery.author.name)
+//     })
+//   })
+// }
+// console.log(authorUnique());
 
-const expectedResult = false;
+function unico() {
+  let resp = false;
+  books.forEach((element) => {
+    let count = 0;
+    books.forEach((ele) => {
+      if (ele.author.birthYear === element.author.birthYear && ele.author.name !== element.author.name) {
+        count += 1
+      }
+    })
+    if (count > 0) {
+      resp = true;
+    }
+  })
+  return resp
+}
+console.log(unico());
