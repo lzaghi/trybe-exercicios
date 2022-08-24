@@ -78,4 +78,10 @@ const books = [
 function reduceNames() {
   return books.reduce((acc, curr) => `${acc} ${curr.author.name},` , '');
 }
-console.log(pontoFinal(reduceNames()));
+// console.log(pontoFinal(reduceNames()));
+
+function averageAge() {
+  const soma = books.reduce((acc, curr) => acc + (curr.releaseYear - curr.author.birthYear), 0)
+  return (soma / (books.length))
+}
+console.log(averageAge());
