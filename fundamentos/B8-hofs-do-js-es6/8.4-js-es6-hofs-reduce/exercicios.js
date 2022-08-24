@@ -75,13 +75,23 @@ const books = [
   },
 ];
 
+//EXERCICIO 2
 function reduceNames() {
   return books.reduce((acc, curr) => `${acc} ${curr.author.name},` , '');
 }
 // console.log(pontoFinal(reduceNames()));
 
+
+// EXERCICIO 3
 function averageAge() {
   const soma = books.reduce((acc, curr) => acc + (curr.releaseYear - curr.author.birthYear), 0)
   return (soma / (books.length))
 }
-console.log(averageAge());
+// console.log(averageAge());
+
+
+// EXERCICIO 4
+function longestNamedBook() {
+  return books.reduce( (acc, curr) => (acc.name.length > curr.name.length) ? acc : curr )
+}
+console.log(longestNamedBook());
