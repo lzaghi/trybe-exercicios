@@ -79,5 +79,13 @@ const otherPerson = {
   nationality: 'Russian',
 };
 
-console.log(getNationality(otherPerson)); // Ivan is Russian
-console.log(getNationality(person));
+// console.log(getNationality(otherPerson)); // Ivan is Russian
+// console.log(getNationality(person)); // João is Brazilian
+
+
+// ======== OBJECT PROPERTY SHORTHAND
+const getPosition = (latitude, longitude) => ({
+  latitude,
+  longitude,});
+
+console.log(getPosition(-19.8157, -43.9542));
