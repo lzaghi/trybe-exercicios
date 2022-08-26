@@ -27,7 +27,15 @@ const jobInfos = {
 };
 
 const infosCompletas = {...user, ...jobInfos}
-console.log(infosCompletas);
+// console.log(infosCompletas);
 
 const { name, age, nationality, profession, squad, squadInitials } = infosCompletas
-console.log(`Hi, my name is ${name}, I'm ${age} years old and I'm ${nationality}. I work as a ${profession} and my squad is ${squadInitials}-${squad} `);
+// console.log(`Hi, my name is ${name}, I'm ${age} years old and I'm ${nationality}. I work as a ${profession} and my squad is ${squadInitials}-${squad} `);
+
+
+// ========== ARRAY DESTRUCTURING
+const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
+saudacoes[1](saudacoes[0]); // Olá
+
+const [ frase, funcao ] = saudacoes
+funcao(frase); // Olá
