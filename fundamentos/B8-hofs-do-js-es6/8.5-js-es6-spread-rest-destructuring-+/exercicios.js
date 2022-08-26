@@ -79,4 +79,12 @@ const filterPeople = (array) => {
 //REFATORADO
 const filterPeopleR = (array) => array.filter(({ bornIn, nationality}) => bornIn <= 2000 && nationality === 'Australian');
 
-console.log(filterPeopleR(people));
+// console.log(filterPeopleR(people));
+
+
+// ====== EXERCICIO 5
+const myList = [5, 2, 3];
+
+const swap = ([ primeiro, segundo, terceiro]) => [terceiro, segundo, primeiro];
+
+console.log(swap(myList));
