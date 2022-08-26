@@ -34,8 +34,24 @@ const { name, age, nationality, profession, squad, squadInitials } = infosComple
 
 
 // ========== ARRAY DESTRUCTURING
+
+// 1
 const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
-saudacoes[1](saudacoes[0]); // Olá
+// saudacoes[1](saudacoes[0]); // Olá
 
 const [ frase, funcao ] = saudacoes
-funcao(frase); // Olá
+// funcao(frase); // Olá
+
+
+// 2
+let comida = 'gato';
+let animal = 'água';
+let bebida = 'arroz';
+console.log(comida, animal, bebida); // gato água arroz. Ordem errada, nomes não informativos
+
+// let lista = [comida, animal, bebida]
+// const [ Animal, Bebida, Comida ] = lista
+
+[comida, animal, bebida] = [bebida, comida, animal]  // Gabarito. Cria o array e já o desestrutura!!!
+
+console.log(animal, bebida, comida); // gato água arroz
