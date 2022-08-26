@@ -104,11 +104,21 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
+// function containsA() {
+//   return names.reduce( (acc, curr) => {
+//     const palavraQuebrada = curr.split('')
+//     palavraQuebrada.forEach((element) => (element.toLowerCase() === 'a') ? acc += 1 : acc);
+//     return acc
+//   }, 0)
+// }
+// console.log(containsA());
+
+//GABARITO
 function containsA() {
-  return names.reduce( (acc, curr) => {
-    const palavraQuebrada = curr.split('')
-    palavraQuebrada.forEach((element) => (element.toLowerCase() === 'a') ? acc += 1 : acc);
-    return acc
-  }, 0)
+  return names.reduce((acc, currWord) =>
+     acc + currWord.split('').reduce((acumulator, currLetter) => {
+        if (currLetter === 'a' || currLetter === 'A') return acumulator + 1;
+        return acumulator;
+     }, 0), 0);
 }
 console.log(containsA());
