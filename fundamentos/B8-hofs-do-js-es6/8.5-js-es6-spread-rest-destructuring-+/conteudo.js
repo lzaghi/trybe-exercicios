@@ -47,11 +47,19 @@ const [ frase, funcao ] = saudacoes
 let comida = 'gato';
 let animal = 'água';
 let bebida = 'arroz';
-console.log(comida, animal, bebida); // gato água arroz. Ordem errada, nomes não informativos
+// console.log(comida, animal, bebida); // gato água arroz. Ordem errada, nomes não informativos
 
 // let lista = [comida, animal, bebida]
 // const [ Animal, Bebida, Comida ] = lista
 
 [comida, animal, bebida] = [bebida, comida, animal]  // Gabarito. Cria o array e já o desestrutura!!!
 
-console.log(animal, bebida, comida); // gato água arroz
+// console.log(animal, bebida, comida); // gato água arroz
+
+
+// 3
+let numerosPares = [1, 3, 5, 6, 8, 10, 12];
+console.log(numerosPares); // imprime tudo, não condiz com o que deveria possuir
+
+[,,, ...numerosPares] = numerosPares;  // Gabarito. nao estritamente necessario atribuir a uma const p desestruturar!!!
+console.log(numerosPares); // [6, 8, 10, 12];
