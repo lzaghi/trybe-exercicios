@@ -59,7 +59,25 @@ let bebida = 'arroz';
 
 // 3
 let numerosPares = [1, 3, 5, 6, 8, 10, 12];
-console.log(numerosPares); // imprime tudo, não condiz com o que deveria possuir
+// console.log(numerosPares); // imprime tudo, não condiz com o que deveria possuir
 
 [,,, ...numerosPares] = numerosPares;  // Gabarito. nao estritamente necessario atribuir a uma const p desestruturar!!!
-console.log(numerosPares); // [6, 8, 10, 12];
+// console.log(numerosPares); // [6, 8, 10, 12];
+
+
+// ======= DEFAULT DESTRUCTURING
+const getNationality = ({ firstName, nationality = 'Brazilian' }) => `${firstName} is ${nationality}`;
+
+const person = {
+  firstName: 'João',
+  lastName: 'Jr II',
+};
+
+const otherPerson = {
+  firstName: 'Ivan',
+  lastName: 'Ivanovich',
+  nationality: 'Russian',
+};
+
+console.log(getNationality(otherPerson)); // Ivan is Russian
+console.log(getNationality(person));
