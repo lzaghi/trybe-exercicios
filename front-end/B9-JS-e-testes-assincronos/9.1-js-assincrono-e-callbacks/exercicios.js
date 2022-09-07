@@ -70,18 +70,36 @@
 // // ORDEM DE RETORNO : A C B
 
 
-// =============== EXERCICIO 3
-const getPlanet = () => {
-  setTimeout(() => {
-    const mars = {
-      name: 'Mars',
-      distanceFromSun: {
-        value: 227900000,
-        measurementUnit: 'kilometers',
-      },
-    };
-    console.log('Returned planet: ', mars);
-  }, 4000)
+// // =============== EXERCICIO 3
+// const getPlanet = () => {
+//   setTimeout(() => {
+//     const mars = {
+//       name: 'Mars',
+//       distanceFromSun: {
+//         value: 227900000,
+//         measurementUnit: 'kilometers',
+//       },
+//     };
+//     console.log('Returned planet: ', mars);
+//   }, 4000)
+// };
+
+// getPlanet(); // Imprime Marte depois de 4 segundos
+
+
+// ============= EXERCICIO 4
+const messageDelay = () => Math.floor(Math.random() * 5000);
+
+const getMarsTemperature = () => {
+  const maxTemperature = 58;
+  return Math.floor(Math.random() * maxTemperature);
 };
 
-getPlanet(); // Imprime Marte depois de 4 segundos
+const sendMarsTemperature = (callback) => {
+  setTimeout(() => {
+    const temperaturaAtual = callback;
+    console.log(`A temperatura de Marte é: ${temperaturaAtual} graus celsius`);
+  }, messageDelay())
+}
+
+sendMarsTemperature(getMarsTemperature()); // Imprime "A temperatura de Marte é: 20 graus celsius", por exemplo
