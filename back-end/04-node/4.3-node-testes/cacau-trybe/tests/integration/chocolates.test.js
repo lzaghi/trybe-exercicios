@@ -1,57 +1,48 @@
 const chai = require('chai');
+const chaiHttp = require('chai-http');
+const app = require('../../src/app');
+const fs = require('fs');
+const sinon = require('sinon');
 
 const { expect } = chai;
-const chaiHttp = require('chai-http');
 
 chai.use(chaiHttp);
-const app = require('../../src/app');
 
-const sinon = require('sinon');
-const fs = require('fs');
 
-const mockFile = JSON.stringify({ 
+// const mockFile = JSON.stringify({ 
+//   brands: [
+//     { id: 1, name: 'Lindt & Sprungli' },
+//     { id: 2, name: 'Ferrero' },
+//     { id: 3, name: 'Ghirardelli' },
+//   ],
+//   chocolates: [
+//     { id: 1, name: 'Mint Intense', brandId: 1 },
+//     { id: 2, name: 'White Coconut', brandId: 1 },
+//     { id: 3, name: 'Mon Chéri', brandId: 2, },
+//     { id: 4, name: 'Mounds', brandId: 3 },
+//   ],
+// });
+
+const dubleChocolateFile = {
   brands: [
-    {
-      id: 1,
-      name: 'Lindt & Sprungli',
-    },
-    {
-      id: 2,
-      name: 'Ferrero',
-    },
-    {
-      id: 3,
-      name: 'Ghirardelli',
-    },
+    { id: 1, name: "Lindt & Sprungli" },
+    { id: 2, name: "Ferrero" },
+    { id: 3, name: "Ghirardelli" },
   ],
   chocolates: [
-    {
-      id: 1,
-      name: 'Mint Intense',
-      brandId: 1,
-    },
-    {
-      id: 2,
-      name: 'White Coconut',
-      brandId: 1,
-    },
-    {
-      id: 3,
-      name: 'Mon Chéri',
-      brandId: 2,
-    },
-    {
-      id: 4,
-      name: 'Mounds',
-      brandId: 3,
-    },
+    { id: 1, name: "Mint Intense", brandId: 1 },
+    { id: 2, name: "White Coconut", brandId: 1 },
+    { id: 3, name: "Mon Chéri", brandId: 2 },
+    { id: 4, name: "Mounds", brandId: 3 },
   ],
-});
+  nextChocolateId: 5
+};
 
 describe('Testando a API Cacau Trybe', function () {
   beforeEach(function () {
     sinon.stub(fs.promises, 'readFile')
-      .resolves(mockFile);
+      // .resolves(mockFile);
+      .resolves(JSON.stringify(dubleChocolateFile))
   });
 
   afterEach(function () {
@@ -135,14 +126,14 @@ describe('Testando a API Cacau Trybe', function () {
       const expectedStatus = 201;
       const expectedResponse = {
         id: 5,
-        name: 'Trybe',
+        name: 'Trybe Chocolate',
         brandId: 1,
-      }
+      };
 
       const requestBody = {
-        name: 'Trybe',
+        name: 'Trybe Chocolate',
         brandId: 1
-      }
+      };
 
       // act
       const response = await chai
